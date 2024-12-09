@@ -1,0 +1,14 @@
+C:\Users\Acer\source\repos\Exseption\Exseption\bin\Debug\net8.0\Exseption.exe
+C:\Users\Acer\source\repos\Exseption\Exseption\bin\Debug\net8.0\Exseption.deps.json
+C:\Users\Acer\source\repos\Exseption\Exseption\bin\Debug\net8.0\Exseption.runtimeconfig.json
+C:\Users\Acer\source\repos\Exseption\Exseption\bin\Debug\net8.0\Exseption.dll
+C:\Users\Acer\source\repos\Exseption\Exseption\bin\Debug\net8.0\Exseption.pdb
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.AssemblyInfo.cs
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.dll
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\refint\Exseption.dll
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.pdb
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\Exseption.genruntimeconfig.cache
+C:\Users\Acer\source\repos\Exseption\Exseption\obj\Debug\net8.0\ref\Exseption.dll

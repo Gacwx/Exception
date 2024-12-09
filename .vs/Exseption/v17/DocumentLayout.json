@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Acer\\source\\repos\\Exseption\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E566B4A7-749D-4AF8-8739-F6AA27563B0A}|Exseption\\Exseption.csproj|c:\\users\\acer\\source\\repos\\exseption\\exseption\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E566B4A7-749D-4AF8-8739-F6AA27563B0A}|Exseption\\Exseption.csproj|solutionrelative:exseption\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\source\\repos\\Exseption\\Exseption\\Program.cs",
+              "RelativeDocumentMoniker": "Exseption\\Program.cs",
+              "ToolTip": "C:\\Users\\Acer\\source\\repos\\Exseption\\Exseption\\Program.cs",
+              "RelativeToolTip": "Exseption\\Program.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAQwKsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T08:33:24.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
