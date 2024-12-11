@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
 using System.Reflection.Metadata;
+using System.Linq;
+using System.Collections.Generic;
 
 ////class Program
 //{
@@ -142,83 +144,193 @@ using System.Reflection.Metadata;
 //}
 
 
-public interface ITestpaper
+//public interface ITestpaper
+//{
+//    string Subject { get; }
+//    string[] MarkScheme {  get; }
+//    string PassMark { get; }
+//}
+
+//public interface IStudent
+//{
+//    string[] TestsTaken { get; }
+//    void TakeTest(ITestpaper paper, string[] answers);
+//}
+
+
+//public class TestPaper : ITestpaper
+//{
+//    public string Subject { get; private set; }
+//    public string[] MarkScheme { get; private set; }
+//    public string PassMark { get; private set; }
+
+//    public TestPaper(string subject, string[] markScheme, string passMark)
+//    {
+//        Subject = subject;
+//        MarkScheme = markScheme;
+//        PassMark = passMark;
+//    }
+//}
+
+//public class Student : IStudent
+//{
+//    private List<string> _testsTaken = new List<string>();
+
+//    public string[] TestsTaken
+//    {
+//        get => _testsTaken.Count > 0 ? _testsTaken.ToArray() : new string[] { "No tests taken" };
+//    }
+
+//    public void TakeTest(ITestpaper paper, string[] answers)
+//    {
+//        int correctAnswers = 0;
+
+//        for (int i = 0; i < paper.MarkScheme.Length; i++)
+//        {
+//            if (i < answers.Length && answers[i] == paper.MarkScheme[i])
+//            {
+//                correctAnswers++;
+//            }
+
+//        }
+
+//        int score = (correctAnswers * 100) / paper.MarkScheme.Length;
+//        int passMark = int.Parse(paper.PassMark.TrimEnd('%'));
+
+//        string result = score >= passMark ? $"{paper.Subject}: Passed!!!({score}%)" : $"{paper.Subject}: Failed!!!({score}%)";
+
+//        _testsTaken.Add(result);
+
+//    } 
+//}
+
+//class Programmmmmmmmmmm
+//{
+//    static void Main()
+//    {
+//        TestPaper paper1 = new TestPaper("Maths", new string[] { "1A", "2C", "3D", "4A", "5A" }, "50%");
+//        TestPaper paper2 = new TestPaper("Chemistry", new string[] { "1C", "2D", "3B", "4C" }, "75%");
+//        TestPaper paper3 = new TestPaper("Computing", new string[] { "1D", "2C", "3C", "4B", "5D" }, "60%");
+
+//        Student student1 = new Student();
+//        Student student2 = new Student();
+
+//        Console.WriteLine(string.Join(", ", student1.TestsTaken));
+
+//        student1.TakeTest(paper1, new string[] { "1A", "2C", "3D", "4A", "5A" });
+//        Console.WriteLine(string.Join(", ", student1.TestsTaken));
+
+//        student2.TakeTest(paper2, new string[] { "1C", "2D", "3B" });
+//        Console.WriteLine(string.Join(", ", student2.TestsTaken));
+//    }
+//}
+
+
+//public class Program3333333333
+//{
+//    public static string CountAll(string input)
+//    {
+//        int letters = input.Count(char.IsLetter);
+//        int digits = input.Count(char.IsDigit);
+
+//        return $"{{ LETTERS = {letters}, DIGITS = {digits} }}";
+//    }
+
+//    public static void Main()
+//    {
+//        Console.WriteLine(CountAll("Hello World"));
+//        Console.WriteLine(CountAll("H3ll0 W0rld"));
+//        Console.WriteLine(CountAll("149990"));
+//    }
+//}
+
+
+public enum Allergen
 {
-    string Subject { get; }
-    string[] MarkScheme {  get; }
-    string PassMark { get; }
+    Eggs = 1,
+    Peanuts = 2,
+    Shellfish = 4,
+    Strawberries = 8,
+    Tomatoes = 16,
+    Chocolate = 32,
+    Pollen = 64,
+    Cats = 128,
+
 }
 
-public interface IStudent
+public class Allergies
 {
-    string[] TestsTaken { get; }
-    void TakeTest(ITestpaper paper, string[] answers);
-}
+    public string Name { get; }
+    public int Score { get; private set; }
+
+    private readonly List<Allergen>();
 
 
-public class TestPaper : ITestpaper
-{
-    public string Subject { get; private set; }
-    public string[] MarkScheme { get; private set; }
-    public string PassMark { get; private set; }
-
-    public TestPaper(string subject, string[] markScheme, string passMark)
+    public Allergies(string name)
     {
-        Subject = subject;
-        MarkScheme = markScheme;
-        PassMark = passMark;
-    }
-}
-
-public class Student : IStudent
-{
-    private List<string> _testsTaken = new List<string>();
-
-    public string[] TestsTaken
-    {
-        get => _testsTaken.Count > 0 ? _testsTaken.ToArray() : new string[] { "No tests taken" };
-    }
-
-    public void TakeTest(ITestpaper paper, string[] answers)
-    {
-        int correctAnswers = 0;
-
-        for (int i = 0; i < paper.MarkScheme.Length; i++)
-        {
-            if (i < answers.Length && answers[i] == paper.MarkScheme[i])
-            {
-                correctAnswers++;
-            }
-
-        }
-
-        int score = (correctAnswers * 100) / paper.MarkScheme.Length;
-        int passMark = int.Parse(paper.PassMark.TrimEnd('%'));
-
-        string result = score >= passMark ? $"{paper.Subject}: Passed!!!({score}%)" : $"{paper.Subject}: Failed!!!({score}%)";
-
-        _testsTaken.Add(result);
-
+        Name = name;
+        Score = 0; 
+        _allergies = new List<Allergen>();
     } 
-}
 
-class Programmmmmmmmmmm
-{
-    static void Main()
+    public Allergies(string name, int score)
     {
-        TestPaper paper1 = new TestPaper("Maths", new string[] { "1A", "2C", "3D", "4A", "5A" }, "50%");
-        TestPaper paper2 = new TestPaper("Chemistry", new string[] { "1C", "2D", "3B", "4C" }, "75%");
-        TestPaper paper3 = new TestPaper("Computing", new string[] { "1D", "2C", "3C", "4B", "5D" }, "60%");
-
-        Student student1 = new Student();
-        Student student2 = new Student();
-
-        Console.WriteLine(string.Join(", ", student1.TestsTaken));
-
-        student1.TakeTest(paper1, new string[] { "1A", "2C", "3D", "4A", "5A" });
-        Console.WriteLine(string.Join(", ", student1.TestsTaken));
-
-        student2.TakeTest(paper2, new string[] { "1C", "2D", "3B" });
-        Console.WriteLine(string.Join(", ", student2.TestsTaken));
+        foreach(Allergen allergen in Enum.GetValues(typeof(Allergen)))
+        {
+            if((score & (int)allergen) != 0)
+            {
+                _allergies.Add(allergen);
+            }
+        }
+        Score = score;
     }
+
+    public Allergies(string name, string allergies): this(name)
+    {
+        var allergyList = allergies.Split(' ');
+        foreach(var allergy in allergyList)
+        {
+            if (Enum.TryParse(allergy,out Allergen allergen))
+            {
+                AddAllergy(allergen);
+            }
+        }
+    } 
+
+    public void AddAllergy(Allergen allergen)
+    {
+        if (!_allergies.Contains(allergen))
+        {
+            _allergies.Add(allergen);
+            Score += (int)allergen;
+        }
+    }
+
+    public void AddAllergy(string allergen)
+    {
+        if(Enum.TryParse(allergen,out Allergen parsedAllergen))
+        {
+            AddAllergy(parsedAllergen);
+        }
+    }
+
+    public void DeleteAllergy(Allergen allergen)
+    {
+        if (!_allergies.Contains(allergen))
+        {
+            _allergies.Remove(allergen);
+            Score -= (int)allergen;
+        }
+    }
+    public void DeleteAllergy(string allergen)
+    {
+        if (Enum.TryParse(allergen, out Allergen parsedAllergen))
+        {
+            DeleteAllergy(parsedAllergen);
+        }
+    }
+
+    public bool IsAllergicTo(Allergen allergen) => _allergies.Contains(allergen);
+
+    public bool
 }
